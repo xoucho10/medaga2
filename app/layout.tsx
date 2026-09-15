@@ -7,7 +7,7 @@ export const metadata = {
   description: "Mixed Day & Boarding in Iganga. Knowledge is Light. Est 2005",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-white text-gray-900">
