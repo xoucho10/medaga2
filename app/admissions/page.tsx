@@ -155,7 +155,7 @@ export default function Admissions() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <Link href="/apply" className="bg-[#0D4DA1] text-white px-8 py-4 rounded-full font-black text-[13px] text-center">Apply Online →</Link>
-            <a href="https://www.google.com/maps/search/Fairway+Nursery+School+Iganga" target="_blank" className="bg-[#E30613] text-white px-8 py-4 rounded-full font-black text-[13px] text-center">Get Directions →</a>
+            <a href="https://www.google.com/maps/search/XXXXXXX+Nursery+School+Iganga" target="_blank" className="bg-[#E30613] text-white px-8 py-4 rounded-full font-black text-[13px] text-center">Get Directions →</a>
           </div>
         </div>
       </section>

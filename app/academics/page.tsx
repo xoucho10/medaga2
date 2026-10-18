@@ -52,7 +52,7 @@ export default function Academics() {
 
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto bg-[#0D4DA1] rounded-[28px] p-8 flex flex-col md:flex-row justify-between items-center gap-6 text-white">
-          <div><h3 className="text-[22px] font-black">Ready to Join Fairway?</h3><p className="text-blue-200 text-[13px] mt-1">Interviews every Saturday 8am-2pm</p></div>
+          <div><h3 className="text-[22px] font-black">Ready to Join XXXXXXX?</h3><p className="text-blue-200 text-[13px] mt-1">Interviews every Saturday 8am-2pm</p></div>
           <Link href="/admissions" className="bg-[#FFCB05] text-[#0D4DA1] px-8 py-4 rounded-full font-black text-[13px]">See Admission Requirements →</Link>
         </div>
       </section>

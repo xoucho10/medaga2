@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -17,7 +18,7 @@ const images = [
 ];
 
 const videos = [
-  { id:1, title:"A Day at Fairway - Morning Assembly to Prep", youtube:"https://www.youtube.com/embed/dQw4w9WgXcQ", thumb:"Assembly Video" },
+  { id:1, title:"A Day at XXXXXXX - Morning Assembly to Prep", youtube:"https://www.youtube.com/embed/dQw4w9WgXcQ", thumb:"Assembly Video" },
   { id:2, title:"PLE 2024 Results Celebration", youtube:"https://www.youtube.com/embed/dQw4w9WgXcQ", thumb:"PLE Celebration" },
   { id:3, title:"Boarding Life - Safe & Loving", youtube:"https://www.youtube.com/embed/dQw4w9WgXcQ", thumb:"Boarding Tour" },
 ];
@@ -36,7 +37,7 @@ export default function Gallery() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,203,5,0.15),transparent_50%)]"></div>
         <div className="max-w-7xl mx-auto relative text-center">
           <div className="inline-block bg-[#FFCB05] text-[#0D4DA1] text-[10px] md:text-[11px] font-black px-4 py-2 rounded-full mb-4">GALLERY • 200+ PHOTOS & VIDEOS</div>
-          <h1 className="text-[32px] md:text-6xl font-black leading-[0.9]">Life at <span className="text-[#FFCB05]">Fairway</span><br/>In Pictures & Videos</h1>
+          <h1 className="text-[32px] md:text-6xl font-black leading-[0.9]">Life at <span className="text-[#FFCB05]">XXXXXX</span><br/>In Pictures & Videos</h1>
           <p className="text-blue-100/80 text-[13px] md:text-[14px] mt-4 max-w-xl mx-auto">Classroom, boarding, sports, assembly, PLE, graduation - See why 800+ parents trust us.</p>
         </div>
       </section>
@@ -73,7 +74,7 @@ export default function Gallery() {
       <section className="bg-[#F8F9FB] py-12 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-3 mb-8">
-            <div><h2 className="text-[22px] md:text-[28px] font-black text-[#0D4DA1]">School Videos</h2><p className="text-[13px] text-gray-500 mt-1">Watch life at Fairway - Assembly, PLE, Boarding</p></div>
+            <div><h2 className="text-[22px] md:text-[28px] font-black text-[#0D4DA1]">School Videos</h2><p className="text-[13px] text-gray-500 mt-1">Watch life at XXXXXXX - Assembly, PLE, Boarding</p></div>
             <a href="https://youtube.com" target="_blank" className="w-full md:w-auto text-center bg-[#E30613] text-white px-5 py-3 rounded-full text-[12px] font-black">YouTube Channel →</a>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
@@ -96,7 +97,7 @@ export default function Gallery() {
               <h3 className="font-black text-[16px]">Want Virtual Tour of Campus?</h3>
               <p className="text-[12px] text-blue-200 mt-1">Live WhatsApp video tour every Saturday 9am-12pm</p>
             </div>
-            <a href="https://wa.me/256782631761?text=Hello%20I%20want%20virtual%20tour%20of%20Fairway%20School" target="_blank" className="w-full md:w-auto text-center bg-[#25D366] px-6 py-3 rounded-full font-black text-[12px]">Request WhatsApp Tour →</a>
+            <a href="https://wa.me/256782631761?text=Hello%20I%20want%20virtual%20tour%20of%20XXXXXX%20School" target="_blank" className="w-full md:w-auto text-center bg-[#25D366] px-6 py-3 rounded-full font-black text-[12px]">Request WhatsApp Tour →</a>
           </div>
         </div>
       </section>

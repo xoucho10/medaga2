@@ -50,15 +50,15 @@ export default function Home() {
       {/* WELCOME */}
       <section className="max-w-7xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-2 gap-14 items-center">
         <div>
-          <p className="text-[#E30613] font-black text-[11px] tracking-[0.2em] mb-4">WELCOME TO FAIRWAY</p>
+          <p className="text-[#E30613] font-black text-[11px] tracking-[0.2em] mb-4">WELCOME TO XXXXXXXX</p>
           <h3 className="text-[34px] md:text-[44px] font-black text-[#0D4DA1] leading-[0.95] mb-5">Where Winners Are<br/>Made, Not Born</h3>
-          <p className="text-gray-600 text-[15.5px] leading-relaxed mb-4">At Fairway Nursery & Primary School Iganga, we believe every child is a winner. Founded on Christian values and <b>Emmitti Emmitto</b>, we have nurtured thousands of leaders since 2005.</p>
+          <p className="text-gray-600 text-[15.5px] leading-relaxed mb-4">At XXXXX Nursery & Primary School Iganga, we believe every child is a winner. Founded on Christian values and <b>Emmitti Emmitto</b>, we have nurtured thousands of leaders since 2005.</p>
           <p className="text-gray-600 text-[15.5px] leading-relaxed mb-8">Fully registered <b>PPS/F/95</b>, UNEB examination center, offering both Day and Boarding.</p>
           <Link href="/about" className="inline-block bg-[#0D4DA1] text-white px-6 py-3 rounded-full text-[13px] font-black hover:bg-blue-800 transition">Learn More About Us →</Link>
         </div>
         <div className="bg-[#F6F7F9] rounded-[28px] p-6 md:p-8">
           <div className="bg-white rounded-[20px] p-7 shadow-[0_10px_40px_rgba(0,0,0,0.06)] border-l-[6px] border-[#FFCB05]">
-            <p className="text-[15px] italic text-gray-700 leading-relaxed">"Education is the most powerful weapon which you can use to change the world. At Fairway, we light that fire."</p>
+            <p className="text-[15px] italic text-gray-700 leading-relaxed">"Education is the most powerful weapon which you can use to change the world. At XXXXXXX, we light that fire."</p>
             <p className="mt-4 font-black text-[#0D4DA1] text-sm">Headteacher</p>
           </div>
           <div className="mt-6 grid grid-cols-3 gap-3 text-center">
@@ -73,7 +73,7 @@ export default function Home() {
       <section className="bg-[#0D4DA1] py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-14">
-            <h3 className="text-[32px] md:text-[40px] font-black text-white">Why Parents Choose Fairway</h3>
+            <h3 className="text-[32px] md:text-[40px] font-black text-white">Why Parents Choose Us</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {[
@@ -134,7 +134,7 @@ export default function Home() {
       {/* GALLERY PREVIEW */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-10">
-          <h3 className="text-[32px] font-black text-[#0D4DA1]">Life at Fairway</h3>
+          <h3 className="text-[32px] font-black text-[#0D4DA1]">Life at XXXXX </h3>
           <Link href="/gallery" className="hidden md:block bg-gray-900 text-white px-6 py-2.5 rounded-full text-[13px] font-bold">View Full Gallery →</Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -168,7 +168,7 @@ export default function Home() {
               <Link href="/contact" className="mt-6 block bg-[#0D4DA1] text-white text-center py-3 rounded-full font-bold text-[13px]">Full Contact Page →</Link>
             </div>
             <div className="md:col-span-2 bg-white rounded-[20px] overflow-hidden border">
-              <iframe src="https://www.google.com/maps?q=Fairway+Nursery+School+Iganga+Uganda&z=15&output=embed" width="100%" height="360" style={{ border: 0 }} loading="lazy" className="w-full h-[360px]"></iframe>
+              <iframe src="https://www.google.com/maps?q=XXXXX+Nursery+School+Iganga+Uganda&z=15&output=embed" width="100%" height="360" style={{ border: 0 }} loading="lazy" className="w-full h-[360px]"></iframe>
             </div>
           </div>
         </div>

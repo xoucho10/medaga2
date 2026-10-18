@@ -15,15 +15,15 @@ export default function Contact() {
             <h1 className="text-4xl md:text-5xl font-black leading-[0.9]">Visit, Call, or<br/><span className="text-[#FFCB05]">WhatsApp Us</span></h1>
             <p className="text-blue-100/80 text-[14px] mt-4 leading-relaxed max-w-lg">P.O BOX 102 Iganga • Along Iganga-Jinja Highway, Northern Division. Open Mon-Sat 7:30am-5pm. Admissions interview every Saturday 8am-2pm.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:0782631761" className="bg-[#E30613] px-6 py-3 rounded-full font-black text-[13px]">📞 0782631761</a>
-              <a href="tel:0758735343" className="bg-white text-[#0D4DA1] px-6 py-3 rounded-full font-black text-[13px]">📞 0758735343</a>
+              <a href="tel:0782631761" className="bg-[#E30613] px-6 py-3 rounded-full font-black text-[13px]">📞 0700123123</a>
+              <a href="tel:0772123123" className="bg-white text-[#0D4DA1] px-6 py-3 rounded-full font-black text-[13px]">📞 0772123123</a>
             </div>
           </div>
           <div className="bg-white rounded-[20px] p-6 text-gray-800">
             <h3 className="font-black text-[#0D4DA1]">Quick Contacts</h3>
             <div className="mt-5 space-y-4 text-[13px]">
-              <div className="flex gap-3"><span className="w-10 h-10 bg-[#FFCB05] rounded-full flex items-center justify-center">📞</span><div><p className="font-bold">Admissions Office</p><p className="text-gray-500">0782631761 / 0758735343 (Call & WhatsApp)</p></div></div>
-              <div className="flex gap-3"><span className="w-10 h-10 bg-[#0D4DA1] rounded-full flex items-center justify-center text-white">✉️</span><div><p className="font-bold">Email</p><p className="text-gray-500">fairwayiganga@gmail.com • Reply in 2 hours</p></div></div>
+              <div className="flex gap-3"><span className="w-10 h-10 bg-[#FFCB05] rounded-full flex items-center justify-center">📞</span><div><p className="font-bold">Admissions Office</p><p className="text-gray-500">0700123123 / 0772123123 (Call & WhatsApp)</p></div></div>
+              <div className="flex gap-3"><span className="w-10 h-10 bg-[#0D4DA1] rounded-full flex items-center justify-center text-white">✉️</span><div><p className="font-bold">Email</p><p className="text-gray-500">XXXXXXiganga@gmail.com • Reply in 2 hours</p></div></div>
               <div className="flex gap-3"><span className="w-10 h-10 bg-[#E30613] rounded-full flex items-center justify-center text-white">📍</span><div><p className="font-bold">Location</p><p className="text-gray-500">P.O BOX 102 Iganga, Jinja Road, Northern Division, 5 min from Iganga Town</p></div></div>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Contact() {
             <div className="mt-8 bg-white rounded-[20px] p-8 text-center border-2 border-green-100">
               <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mx-auto">✓</div>
               <h3 className="font-black text-[#0D4DA1] mt-4">Message Received!</h3>
-              <p className="text-[13px] text-gray-600 mt-2">We will WhatsApp you in 5 minutes on 0782631761. Or call us now for faster reply.</p>
+              <p className="text-[13px] text-gray-600 mt-2">We will WhatsApp you in 5 minutes on 0700123123. Or call us now for faster reply.</p>
               <div className="mt-6 flex gap-3 justify-center">
                 <a href="https://wa.me/256782631761" target="_blank" className="bg-[#25D366] text-white px-6 py-3 rounded-full font-bold text-[12px]">Open WhatsApp</a>
                 <button onClick={()=>setSent(false)} className="bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-bold text-[12px]">Send Another</button>
@@ -134,7 +134,7 @@ export default function Contact() {
           <div className="bg-[#F6F7F9] p-3 md:p-4 rounded-[28px]">
             <div className="bg-white rounded-[20px] overflow-hidden shadow-sm border">
               <iframe
-                src="https://www.google.com/maps?q=Fairway+Nursery+and+Primary+School+Iganga+Uganda&z=16&output=embed"
+                src="https://www.google.com/maps?q=XXXXXX+Nursery+and+Primary+School+Iganga+Uganda&z=16&output=embed"
                 width="100%"
                 height="420"
                 style={{ border: 0 }}
@@ -144,7 +144,7 @@ export default function Contact() {
               ></iframe>
               <div className="p-4 bg-[#0D4DA1] text-white flex flex-col md:flex-row justify-between gap-3 text-[11px] font-bold">
                 <span>📍 Along Iganga-Jinja Highway, Northern Division, 5 min from Iganga Town Taxi Park</span>
-                <a href="https://www.google.com/maps/search/Fairway+Nursery+and+Primary+School+Iganga" target="_blank" className="bg-white text-[#0D4DA1] px-4 py-1.5 rounded-full text-center">Get Directions →</a>
+                <a href="https://www.google.com/maps/search/XXXXXX+Nursery+and+Primary+School+Iganga" target="_blank" className="bg-white text-[#0D4DA1] px-4 py-1.5 rounded-full text-center">Get Directions →</a>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Apply() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    const message = `*NEW ADMISSION APPLICATION - FAIRWAY N&P SCHOOL*\n\n` +
+    const message = `*NEW ADMISSION APPLICATION - XXXXXXX N&P SCHOOL*\n\n` +
       `👨‍👩‍👧 Parent: ${form.parentName}\n` +
       `📞 Phone: ${form.phone}\n` +
       `👶 Child: ${form.childName}\n` +
