@@ -168,7 +168,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 8. PRICING ===== */}
+      {/* ===== 8. PRICING - UGX ONLY CHANGE HERE ===== */}
       <section className="bg-[#F8F9FA] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center">
@@ -177,21 +177,23 @@ export default function HomePage() {
           </div>
           <div className="mt-8 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Basic", price: "$24.50", color: "border-t-[#1EA44A]" },
-              { title: "Standard", price: "$34.50", color: "border-t-[#25B1D1]" },
-              { title: "Premium", price: "$54.50", color: "border-t-[#BF000A]" },
-              { title: "Platinum", price: "$89.50", color: "border-t-[#8A2BE2]" },
+              { title: "Baby Class", price: "UGX 250,000", sub: "/ term - Day", boarding: "UGX 540,000 Boarding", color: "border-t-[#1EA44A]" },
+              { title: "Middle / Top", price: "UGX 250,000", sub: "/ term - Day", boarding: "UGX 540,000 Boarding", color: "border-t-[#25B1D1]" },
+              { title: "Primary P1-P5", price: "UGX 280k-320k", sub: "/ term - Day", boarding: "UGX 560k-600k Boarding", color: "border-t-[#BF000A]" },
+              { title: "Primary P6-P7", price: "UGX 350,000", sub: "/ term - Day", boarding: "UGX 630,000 Boarding", color: "border-t-[#8A2BE2]" },
             ].map((p) => (
               <div key={p.title} className={`bg-white rounded-xl shadow-sm p-6 md:p-8 text-center border-t-4 ${p.color}`}>
                 <h4 className="font-bold text-[15px] md:text-[16px]">{p.title}</h4>
-                <p className="text-[36px] md:text-[40px] font-black text-[#BF000A] mt-3 md:mt-4">{p.price}</p>
-                <p className="text-gray-400 text-[11px] md:text-[12px]">/ 5mos</p>
+                <p className="text-[28px] md:text-[32px] font-black text-[#BF000A] mt-3 md:mt-4 leading-tight">{p.price}</p>
+                <p className="text-gray-400 text-[11px] md:text-[12px]">{p.sub}</p>
+                <p className="text-[#141A33] text-[12px] md:text-[13px] font-black mt-1">{p.boarding}</p>
+                <p className="text-gray-400 text-[10px] mt-1">Uniform + Van extra</p>
                 <ul className="mt-4 md:mt-6 space-y-2 md:space-y-3 text-[12px] md:text-[13px] text-gray-600">
                   <li>Far far away, behind the word mountains</li>
                   <li>Vokalia and Consonantia</li>
                   <li>There live the blind texts</li>
                 </ul>
-                <a href="/fees" className="inline-block mt-4 md:mt-6 bg-[#BF000A] text-white px-6 py-3 rounded-full font-bold text-[12px] md:text-[13px]">Take A Course</a>
+                <a href="/classes" className="inline-block mt-4 md:mt-6 bg-[#BF000A] text-white px-6 py-3 rounded-full font-bold text-[12px] md:text-[13px]">Take A Course</a>
               </div>
             ))}
           </div>
