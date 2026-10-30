@@ -12,7 +12,7 @@ export default function ContactPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const sendWhatsApp = (e) => {
+  const sendWhatsApp = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const text = `Hello MEDAG Infant and Primary Kigulu Iganga - Admission FREE 2026%0A%0AParent: ${form.name}%0APhone: ${form.phone}%0AClass: ${form.childClass}%0AMode: ${form.mode}%0AMessage: ${form.message}`;
     window.open(`https://wa.me/256782198528?text=${text}`, "_blank");
@@ -56,7 +56,6 @@ export default function ContactPage() {
           ))}
         </div>
 
-        {/* ADDED BEST INFO - OPENING HOURS + WHAT TO BRING */}
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           <div className="bg-white border border-gray-100 rounded-[20px] p-6 flex gap-4 hover:shadow-md transition-all">
             <div className="w-10 h-10 bg-[#f9fafb] border rounded-full flex items-center justify-center shrink-0">🕘</div>
@@ -82,9 +81,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FORM + DETAILS */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 pb-16 grid md:grid-cols-3 gap-8">
-        {/* FORM */}
         <div className="md:col-span-2 bg-white border border-gray-100 rounded-[24px] p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
           <h3 className="font-bold text-[20px] text-[#111827]">Send Us a Message</h3>
           <p className="text-[12px] text-gray-500 mt-2">Admission FREE 2026 - Baby to P7 - Day & Boarding - Kigulu Iganga</p>
@@ -130,7 +127,6 @@ export default function ContactPage() {
           </form>
         </div>
 
-        {/* SIDE DETAILS */}
         <div className="space-y-5">
           <div className="bg-[#111827] rounded-[24px] p-7 text-white">
             <h4 className="font-bold text-[14px]">MEDAG INFANT AND PRIMARY</h4>
@@ -173,7 +169,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* MAP */}
       <section className="border-t border-gray-100">
         <div className="bg-[#f9fafb] py-4 text-center">
           <p className="text-[11px] font-bold tracking-widest text-gray-500">FIND US ON MAP - KIGULU IGANGA DISTRICT</p>
@@ -183,7 +178,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* BOTTOM CTA - STRETCHED */}
       <section className="relative w-full overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_manners.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-[#111827]/85"></div>
