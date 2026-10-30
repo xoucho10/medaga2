@@ -31,7 +31,7 @@ export default function GalleryPage() {
   ];
 
   const [activeCat, setActiveCat] = useState("All");
-  const [lightbox, setLightbox] = useState(null);
+  const [lightbox, setLightbox] = useState<any>(null);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -51,7 +51,6 @@ export default function GalleryPage() {
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
 
-      {/* BANNER */}
       <section className="relative h-[360px] md:h-[480px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_2.jpg')] bg-cover bg-center transition-transform duration-[2000ms]" style={{ transform: `scale(${1 + scrollY * 0.0002})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#5d50c6]/20 to-black/70"></div>
@@ -62,7 +61,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* FILTER BAR */}
       <section className="bg-white border-b sticky top-0 z-20 backdrop-blur bg-white/90">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 flex gap-2 overflow-x-auto scrollbar-hide">
           {categories.map((cat) => (
@@ -77,7 +75,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* STATS BAR */}
       <section className="bg-[#111827] text-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 grid grid-cols-3 md:grid-cols-4 gap-4 text-center">
           <div><p className="text-[22px] font-bold">{filtered.length}</p><p className="text-[9px] font-medium opacity-60 tracking-widest">PHOTOS</p></div>
@@ -87,7 +84,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* MASONRY GALLERY */}
       <section className="max-w-7xl mx-auto px-3 md:px-6 py-8 md:py-12">
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-5 space-y-4 md:space-y-5">
           {filtered.map((g, i) => (
@@ -115,7 +111,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* VIDEO TOUR - CLEAN */}
       <section className="bg-white border-y py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -149,10 +144,9 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* LIGHTBOX */}
       {lightbox && (
         <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur flex items-center justify-center p-4" onClick={() => setLightbox(null)}>
-          <div className="relative bg-white rounded-[24px] overflow-hidden max-w-3xl w-full max-h-[90vh] animate-fadeUp" onClick={(e) => e.stopPropagation()}>
+          <div className="relative bg-white rounded-[24px] overflow-hidden max-w-3xl w-full max-h-[90vh] animate-fadeUp" onClick={(e: any) => e.stopPropagation()}>
             <div className="relative h-[50vh] md:h-[60vh] bg-[#f9fafb]">
               <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${lightbox.img}')` }}></div>
               <button onClick={() => setLightbox(null)} className="absolute top-4 right-4 w-9 h-9 bg-black/50 backdrop-blur text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors">✕</button>
@@ -172,7 +166,6 @@ export default function GalleryPage() {
         </div>
       )}
 
-      {/* CTA */}
       <section className="relative w-full overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_manners.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-[#111827]/80"></div>
