@@ -11,7 +11,7 @@ export default function HomePage() {
 
   const [current, setCurrent] = useState(0);
   const [scrollY, setScrollY] = useState(0);
-  const statsRef = useRef(null);
+  const statsRef = useRef<HTMLDivElement>(null);
   const [countUp, setCountUp] = useState(false);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function HomePage() {
             { color: "bg-[#8cc63f]", title: "Special Education", text: "Extra support and small groups for children to learn in their own way.", delay: "0.1s" },
             { color: "bg-[#5d50c6]", title: "Book & Library", text: "A cosy library corner with picture books children can borrow and take home.", delay: "0.2s", white: true },
             { color: "bg-[#f55a3c]", title: "Certification", text: "An accredited curriculum and a progress report for parents every term.", delay: "0.3s" },
-          ].map((b) => (
+          ].map((b: any) => (
             <div key={b.title} className={`relative ${b.color} px-4 pt-14 pb-7 text-center group transition-all duration-500 hover:z-10 hover:-translate-y-2 hover:shadow-xl animate-fadeUp`} style={{animationDelay: b.delay}}>
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1e6a8a" strokeWidth="1.2"><path d="M3 5h18v10H3z"/><path d="M8 15l-2 4h12l-2-4"/></svg>
@@ -89,7 +89,7 @@ export default function HomePage() {
               { color: "bg-[#8cc63f]", title: "Sufficient Classrooms", desc: "Bright, spacious rooms with small groups, low noise and plenty of learning corners." },
               { color: "bg-[#f55a3c]", title: "Creative Lessons", desc: "Art, music, clay and story time that build confidence, language and fine motor skills." },
               { color: "bg-[#1e6a8a]", title: "Sports Facilities", desc: "Large playground, garden games, football and a summer camp for strength and teamwork." },
-            ].map((item, i) => (
+            ].map((item: any, i: number) => (
               <div key={i} className="group text-center px-2 transition-all duration-500 hover:-translate-y-2">
                 <div className={`w-16 h-16 md:w-[74px] md:h-[74px] ${item.color} rounded-full flex items-center justify-center mx-auto shadow-sm group-hover:shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ${i % 2 === 0 ? 'animate-float' : 'animate-float-slow'}`}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
@@ -128,7 +128,7 @@ export default function HomePage() {
               { name: "Mia Parker", role: "ENGLISH TEACHER", desc: "Teaches music and rhythm, guitar always at hand.", img: "/teacher_mia.jpg" },
               { name: "Stella Smith", role: "ART TEACHER", desc: "Our early reading specialist and story-time host.", img: "/teacher_stella.jpg" },
               { name: "Monica Henderson", role: "SCIENCE TEACHER", desc: "Runs sports, garden games and the summer camp.", img: "/teacher_monica.jpg" },
-            ].map((t) => (
+            ].map((t: any) => (
               <div key={t.name} className="group text-center">
                 <div className="relative w-full h-[320px] md:h-[360px] bg-gray-100 overflow-hidden rounded-2xl">
                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-[800ms] group-hover:scale-110" style={{ backgroundImage: `url('${t.img}')` }}></div>
@@ -156,7 +156,7 @@ export default function HomePage() {
               { title: "Language Lesson", time: "9:00am - 10am", desc: "Stories, rhymes and picture books build vocabulary and a love of reading.", img: "/course_language.jpg" },
               { title: "Music Lesson", time: "9:00am - 10am", desc: "Singing, rhythm games and simple instruments for listening and coordination.", img: "/course_music.jpg" },
               { title: "Sports Lesson", time: "9:00am - 10am", desc: "Running, balance and team games that build strength and fair play.", img: "/course_sports.jpg" },
-            ].map((c) => (
+            ].map((c: any) => (
               <div key={c.title} className="group flex bg-white border border-gray-100 overflow-hidden rounded-xl transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
                 <div className="w-[38%] min-w-[38%] h-[180px] md:h-[200px] bg-gray-200 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{backgroundImage: `url('${c.img}')`}}></div>
                 <div className="w-[62%] p-4 md:p-6 flex flex-col justify-center">
@@ -182,7 +182,7 @@ export default function HomePage() {
               { n: 351, label: "Successful Kids" },
               { n: 564, label: "Happy Parents" },
               { n: 300, label: "Awards Won" },
-            ].map((s, i) => (
+            ].map((s: any, i: number) => (
               <div key={s.label} className={`text-center transition-all duration-700 ${countUp ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{transitionDelay:`${i*0.15}s`}}>
                 <div className="w-12 h-12 mx-auto flex items-center justify-center bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.3"><rect x="3" y="3" width="18" height="12" rx="1"/><path d="M8 15v3M12 15v3M5 18h14"/></svg>
@@ -203,7 +203,7 @@ export default function HomePage() {
           <div className="relative mt-14 md:mt-20 h-[240px] md:h-[200px] overflow-hidden">
             <div className="absolute inset-0 flex items-center">
               <div className="flex transition-transform duration-[1000ms] ease-in-out will-change-transform" style={{ transform: `translateX(-${current * 100}%)` }}>
-                {testimonials.map((t, i) => (
+                {testimonials.map((t: any, i: number) => (
                   <div key={i} className="min-w-full flex justify-center px-4">
                     <div className="flex flex-col md:flex-row items-center gap-6 max-w-2xl">
                       <div className="shrink-0 w-[80px] h-[80px] md:w-[90px] md:h-[90px] rounded-full overflow-hidden bg-gray-200 bg-cover bg-center shadow-md transition-transform duration-500 hover:scale-105" style={{ backgroundImage: `url('${t.img}')` }}></div>
@@ -222,7 +222,7 @@ export default function HomePage() {
             <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-[15%] md:w-[25%] bg-gradient-to-l from-[#fcfcfc] to-transparent"></div>
           </div>
           <div className="mt-10 flex justify-center gap-2">
-            {testimonials.map((_, i) => (
+            {testimonials.map((_: any, i: number) => (
               <button key={i} onClick={() => setCurrent(i)} className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? "bg-[#1eaaf1] scale-125" : "bg-gray-300 hover:bg-gray-400"}`} />
             ))}
           </div>
@@ -239,7 +239,7 @@ export default function HomePage() {
               { name: "Middle / Top", day: "UGX 250,000", board: "UGX 540,000 Boarding", img: "/pricing_middle.jpg", btn: "bg-[#ffb400] hover:bg-[#ffaa00]", desc: "Full school days with lessons, outdoor play, lunch and a rest time." },
               { name: "Primary P1-P5", day: "UGX 280k-320k", board: "UGX 560k-600k Boarding", img: "/pricing_p1p5.jpg", btn: "bg-[#8cc63f] hover:bg-[#7ab32e]", desc: "Full days plus after-school club, homework support and a monthly progress report." },
               { name: "Primary P6-P7", day: "UGX 350,000", board: "UGX 630,000 Boarding", img: "/pricing_p6p7.jpg", btn: "bg-[#f55a3c] hover:bg-[#e14a2c]", desc: "Our complete programme with extended hours, exam prep, and holiday camps." },
-            ].map((p) => (
+            ].map((p: any) => (
               <div key={p.name} className="group bg-[#f9fafb] text-center pb-6 flex flex-col rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
                 <div className="pt-6 pb-4 px-4">
                   <h4 className="text-[#111827] text-[16px] font-medium group-hover:text-[#5d50c6] transition-colors">{p.name}</h4>
@@ -269,7 +269,7 @@ export default function HomePage() {
               { title: "Skills To Develop Your Child's Memory", desc: "Simple games and daily routines that help young children remember more, from songs to picture cards.", img: "/blog_memory.jpg", date: "27", month: "January" },
               { title: "Why Play Is Serious Learning", desc: "Why short, playful lessons work better for four-year-olds than long sessions at a desk.", img: "/blog_play.jpg", date: "27", month: "January" },
               { title: "Rainy Day Activities At Home", desc: "Ideas for rainy days: quiet crafts and counting games you can set up at home in five minutes.", img: "/blog_rainy.jpg", date: "27", month: "January" },
-            ].map((b) => (
+            ].map((b: any) => (
               <div key={b.title} className="group bg-white overflow-hidden flex flex-col rounded-2xl transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
                 <div className="relative w-full h-[240px] bg-gray-200 bg-cover bg-center overflow-hidden">
                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-[800ms] group-hover:scale-110" style={{backgroundImage: `url('${b.img}')`}}></div>
