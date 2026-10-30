@@ -119,7 +119,6 @@ export default function ClassesPage() {
         .animate-fadeUp { animation: fadeUp 0.7s ease-out both; }
       `}</style>
 
-      {/* BANNER - PARALLAX */}
       <section className="relative h-[340px] md:h-[440px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_2.jpg')] bg-cover bg-center transition-transform duration-[2000ms]" style={{ transform: `scale(${1 + scrollY * 0.0002})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#5d50c6]/20 to-black/70"></div>
@@ -130,7 +129,6 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* PILLS + FEES SUMMARY - STICKY + DYNAMIC */}
       <section className="bg-white border-b sticky top-0 z-30 backdrop-blur bg-white/90">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
           <div className="flex flex-wrap gap-2 text-[10px] md:text-[11px] font-medium">
@@ -139,12 +137,11 @@ export default function ClassesPage() {
             <span className="bg-[#f9fafb] border px-4 py-2 rounded-full">🚌 Van 100k-130k with Matron</span>
             <span className="bg-[#ffb400] text-black px-4 py-2 rounded-full">📍 3k Boda Iganga Town</span>
           </div>
-          {/* Quick Fees Table - HOVER ROWS */}
           <div className="mt-4 overflow-x-auto rounded-2xl border bg-white hidden md:block">
             <table className="w-full text-[11px]">
               <thead className="bg-[#111827] text-white"><tr><th className="p-3.5 text-left font-medium">Class</th><th className="p-3.5 text-center font-medium">Day / Term</th><th className="p-3.5 text-center font-medium">Boarding / Term</th><th className="p-3.5 text-left font-medium">Uniform</th></tr></thead>
               <tbody className="divide-y divide-gray-100">
-                {classes.map((c, i) => (
+                {classes.map((c: any, i: number) => (
                   <tr key={c.title} className={`transition-colors hover:bg-[#fcfcfc] ${c.highlight ? "bg-[#f9f9fb] font-bold" : ""}`}>
                     <td className="p-3.5 font-medium flex items-center gap-2"><span className={`w-2 h-2 rounded-full ${c.accent}`}></span>{c.title} - {c.age}</td>
                     <td className="p-3.5 text-center font-bold text-[#5d50c6]">{c.day}</td>
@@ -158,7 +155,6 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* MIDDLE STRETCHED HERO - LIKE MANNERS BANNER */}
       <section className="relative w-full h-[220px] md:h-[320px] overflow-hidden group">
         <div className="absolute inset-0 bg-[url('/bg_classes_mid.jpg')] bg-cover bg-center transition-transform duration-[1500ms] group-hover:scale-105"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#111827]/80 via-[#5d50c6]/30 to-black/60"></div>
@@ -175,7 +171,6 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* CLASSES WITH FEES - DYNAMIC CARDS */}
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center">
@@ -186,7 +181,7 @@ export default function ClassesPage() {
           </div>
 
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {classes.map((c, i) => (
+            {classes.map((c: any, i: number) => (
               <div key={c.title} className={`group bg-white rounded-[22px] border border-gray-100 shadow-sm border-t-4 ${c.color} overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fadeUp ${c.highlight ? "lg:col-span-2 ring-2 ring-[#5d50c6]/10" : ""}`} style={{animationDelay:`${i*0.08}s`}}>
                 <div className="p-6 md:p-7">
                   <div className="flex justify-between gap-3">
@@ -212,7 +207,7 @@ export default function ClassesPage() {
                     <div className="space-y-3">
                       <div>
                         <p className="text-[9px] font-bold tracking-widest text-gray-400">CURRICULUM</p>
-                        <div className="flex flex-wrap gap-1.5 mt-2">{c.curriculum.map(item => <span key={item} className="text-[9px] bg-[#fcfcfc] border border-gray-100 px-2.5 py-1 rounded-full font-medium group-hover:bg-[#f9f9fb] transition-colors">{item}</span>)}</div>
+                        <div className="flex flex-wrap gap-1.5 mt-2">{c.curriculum.map((item: string) => <span key={item} className="text-[9px] bg-[#fcfcfc] border border-gray-100 px-2.5 py-1 rounded-full font-medium group-hover:bg-[#f9f9fb] transition-colors">{item}</span>)}</div>
                       </div>
                       <div>
                         <p className="text-[9px] font-bold tracking-widest text-gray-400">UNIFORM</p>
@@ -241,7 +236,6 @@ export default function ClassesPage() {
             ))}
           </div>
 
-          {/* WHAT FEES INCLUDE - COLORFUL */}
           <div className="mt-12 bg-white border border-gray-100 rounded-[20px] p-6 md:p-8 shadow-sm">
             <h3 className="font-bold text-[14px] text-[#111827]">What Fees Include + Extra</h3>
             <div className="mt-5 grid md:grid-cols-3 gap-4 text-[11px]">
@@ -252,7 +246,7 @@ export default function ClassesPage() {
                 "Uniform: Nursery 130k Primary 150k (2 sets + sweater + socks) grey vests red bow ties functions",
                 "Transport: Van 100k-130k with matron - 3k boda Iganga Town option",
                 "Admission: FREE 2026 - birth certificate + photos only - MTN 0782198528",
-              ].map((txt, idx) => (
+              ].map((txt: string, idx: number) => (
                 <div key={idx} className="flex gap-2 bg-[#fcfcfc] rounded-xl p-3 border border-gray-50 hover:bg-[#f9f9fb] transition-colors">
                   <span className="text-[#5d50c6] font-bold">•</span>
                   <p className="text-gray-600 leading-[1.5]">{txt}</p>
@@ -263,7 +257,6 @@ export default function ClassesPage() {
         </div>
       </section>
 
-      {/* BOTTOM CTA - STRETCHED */}
       <section className="relative w-full overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_manners.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-[#111827]/85"></div>

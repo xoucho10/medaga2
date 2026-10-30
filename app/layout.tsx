@@ -2,7 +2,7 @@
 import "./globals.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Header() {
   const pathname = usePathname();
@@ -19,12 +19,11 @@ function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
-  const isActive = (href) => pathname === href || (href !== "/" && pathname?.startsWith(href));
+  const isActive = (href: string) => pathname === href || (href !== "/" && pathname?.startsWith(href));
 
   return (
     <header className="sticky top-0 z-[100] bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-[1600px] mx-auto px-4 md:px-8 flex items-center justify-between h-[88px] md:h-[104px]">
-        {/* LOGO - MUCH BIGGER NOW */}
         <Link href="/" className="flex items-center gap-4 shrink-0">
           <img 
             src="/logo.png" 
@@ -37,7 +36,6 @@ function Header() {
           </div>
         </Link>
 
-        {/* DESKTOP NAV - BIGGER TEXT */}
         <nav className="hidden lg:flex items-center gap-7">
           {nav.map((n) => (
             <Link
@@ -54,18 +52,15 @@ function Header() {
           ))}
         </nav>
 
-        {/* APPLY BUTTON - BIGGER */}
         <div className="hidden lg:flex items-center gap-4">
           <Link href="/apply" className="bg-[#BF000A] hover:bg-[#8A0006] text-white px-8 py-3.5 rounded-full font-black text-[14px] shadow-md hover:scale-105 transition-all">
             Apply Now
           </Link>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
         <button onClick={() => setOpen(!open)} className="lg:hidden w-11 h-11 rounded-full bg-[#FFFBFB] border flex items-center justify-center text-[20px]">☰</button>
       </div>
 
-      {/* MOBILE NAV */}
       {open && (
         <div className="lg:hidden border-t bg-white px-4 py-6 space-y-1 shadow-xl">
           {nav.map((n) => (
@@ -141,7 +136,7 @@ function Footer() {
   );
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-white">

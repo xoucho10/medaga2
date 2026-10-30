@@ -63,7 +63,6 @@ export default function ProgramsPage() {
         .animate-fadeUp { animation: fadeUp 0.7s ease-out both; }
       `}</style>
 
-      {/* BANNER - PARALLAX */}
       <section className="relative h-[340px] md:h-[460px] bg-gray-100 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_2.jpg')] bg-cover bg-center transition-transform duration-[2000ms]" style={{ transform: `scale(${1 + scrollY * 0.0002})` }}></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#5d50c6]/20 to-black/70"></div>
@@ -74,7 +73,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* TOP INFO PILLS - STICKY */}
       <section className="bg-white border-b sticky top-0 z-30 backdrop-blur bg-white/90">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex flex-wrap gap-2 text-[10px] md:text-[11px] font-medium">
           <span className="bg-[#f9fafb] border px-4 py-2 rounded-full">📍 Kigulu, Iganga - 3k Boda Town</span>
@@ -85,7 +83,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* PROGRAMS GRID */}
       <section className="bg-[#fcfcfc] py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center">
@@ -96,7 +93,7 @@ export default function ProgramsPage() {
           </div>
 
           <div className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-            {programs.map((p, i) => (
+            {programs.map((p: any, i: number) => (
               <div key={p.title} className={`group bg-white rounded-[20px] shadow-sm border border-gray-100 border-t-4 ${p.color} overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fadeUp ${p.highlight ? "ring-2 ring-[#5d50c6]/10 lg:scale-[1.02]" : ""}`} style={{animationDelay:`${i*0.1}s`}}>
                 <div className="relative h-[170px] md:h-[180px] bg-[#f9fafb] border-b overflow-hidden">
                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-[800ms] group-hover:scale-110" style={{backgroundImage:`url('${p.img}')`}}></div>
@@ -114,7 +111,7 @@ export default function ProgramsPage() {
                   <p className="text-[10px] font-medium text-gray-500 mt-1">{p.age}</p>
                   
                   <ul className="mt-4 space-y-2">
-                    {p.points.map((pt) => (
+                    {p.points.map((pt: string) => (
                       <li key={pt} className="flex gap-2 text-[11px] text-gray-600 leading-[1.4]"><span className="text-[#b88a2b] font-bold">•</span>{pt}</li>
                     ))}
                   </ul>
@@ -130,7 +127,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* SECOND HERO - STRETCHED MIDDLE - LIKE MANNERS BANNER */}
       <section className="relative w-full h-[280px] md:h-[400px] overflow-hidden group">
         <div className="absolute inset-0 bg-[url('/bg_programs_mid.jpg')] bg-cover bg-center transition-transform duration-[1500ms] group-hover:scale-105"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-[#5d50c6]/30 to-black/50"></div>
@@ -153,7 +149,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* PRIMARY HIGHLIGHT - DYNAMIC */}
       <section className="bg-white py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="group bg-white p-2 rounded-[20px] shadow-lg border border-gray-100 md:rotate-1 hover:rotate-0 transition-transform duration-500 order-2 md:order-1">
@@ -193,7 +188,6 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* BOTTOM CTA - STRETCHED */}
       <section className="relative w-full overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg_manners.jpg')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-[#111827]/85"></div>
